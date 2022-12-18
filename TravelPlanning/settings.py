@@ -58,7 +58,7 @@ TEMPLATES = [
         },
     },
 ]
-
+LOGIN_REDIRECT_URL = "home"
 WSGI_APPLICATION = 'TravelPlanning.wsgi.application'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>05d5ec0f-b927-42b0-8654-91643ae79edd.TABLE:main.auth_user</OriginalElement>
+  <nodes>
+    <node x="237.0" y="-71.0">05d5ec0f-b927-42b0-8654-91643ae79edd.TABLE:main.auth_user</node>
+    <node x="31.0" y="-90.0">05d5ec0f-b927-42b0-8654-91643ae79edd.TABLE:main.core_tripplace</node>
+    <node x="-281.0" y="-38.0">05d5ec0f-b927-42b0-8654-91643ae79edd.TABLE:main.core_activity</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="05d5ec0f-b927-42b0-8654-91643ae79edd.TABLE:main.core_activity" target="05d5ec0f-b927-42b0-8654-91643ae79edd.TABLE:main.core_tripplace" relationship="REFERENCES">
+      <point x="122.0" y="0.0" />
+      <point x="-12.0" y="55.0" />
+      <point x="-12.0" y="-19.0" />
+      <point x="-97.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="59.0" y="55.0" />
+  <SelectedNodes>
+    <node>05d5ec0f-b927-42b0-8654-91643ae79edd.TABLE:main.core_tripplace</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+

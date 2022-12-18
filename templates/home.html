@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+         <form action="{% url 'home' %}" method="get">
+           <div class="row height d-flex justify-content-center align-items-center">
+               <div class="col-md-12 mb-4 search">
+                     <i class="fa fa-search" style="color: #17a2b8;"></i>
+                    <input type="search" class="form-control" name="search" placeholder="Enter Your Destination..e.g. Jordan ">
+               </div>
+
+
+            </div>
+               <button type="submit" class="sch btn btn-md btn-dark">Search</button>
+        </form>
+        <br>
+
+        <div class="row">
+               {% for places in tripe_place %}
+            <div class="col-md-3">
+                <div class="card">
+                   <a href="{{ places.get_absolute_url }}">
+                       <img src="{{ places.place_image.url }}" class="card-img-top img-thumbnail" alt="..."></a>
+                  <div class="card-body">
+                    <p class="card-text">{{ places.place_name }}</p>
+                  </div>
+                </div>
+            </div>
+             {% endfor %}
+        </div>
+
+
+
+
+    </div>
+
+{% endblock content %}

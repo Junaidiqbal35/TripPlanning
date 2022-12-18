@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_filters %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <form action="{% url 'create_trip_plan' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                     {{ form|crispy}}
+                        {{ trip_form.management_form }}
+                        {% for form in trip_form %}
+                            <p class="lead"> Day: {{ forloop.counter }}</p>
+                            {{ form|crispy }}
+                        {% endfor %}
+                    <button class="btn btn-dark"> Save </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

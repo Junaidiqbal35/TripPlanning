@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container mt-2 w-75 p-3 border">
+
+{#        <h3><span class="badge rounded-pill bg-secondary">  {{tripe_place.start_date}}</span></h3>#}
+        <h3>
+            <small class="text-muted">{{tripe_place.number_of_days_trip}} days trip to {{tripe_place.place_name}}</small>
+          </h3>
+          <hr>
+      {% with place_activity=tripe_place.place_activity.all %}
+          {% for activity in place_activity %}
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-1">
+{#              <strong> {{ activity.day_number }}</strong><hr style="width: 40px;">#}
+            </div>
+            <div class="col-md-8">
+                <div class="card border-0 mb-3" style="max-width: 700px;">
+                    <div class="row no-gutters">
+                      <div class="col-md-4">
+                        <img src="{{ activity.activity_place_image.url }}" class="img-fluid" alt="..." style="height:230px; width:230px;">
+                      </div>
+                      <div class="col-md-6" style="width: 60%;">
+                        <div class="card-body">
+                          <h5 class="card-title">Places To Visit At: {{ activity.activity_place_name}}</h5>
+                          <p class="card-text">
+                            {{ activity.activity_place_description|linebreaks }}
+                          </p>
+{#                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>#}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+          {% endfor %}
+          {% endwith %}
+        <hr>
+
+
+
+
+
+    </diV>
+
+
+
+{% endblock content %}
